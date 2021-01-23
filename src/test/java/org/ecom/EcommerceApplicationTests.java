@@ -9,5 +9,13 @@ class EcommerceApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
+//	@Test
+//	public void testCreateCategorie() {
+//		Categorie c =new Categorie();
+//		c.setIdcategorie((long) 11);
+//        c.setNomCategorie("ordianteurs");
+//        c.setDescription("ordinateur portable");
+//        c.setNomPhoto("image.png");
+//        c.ajouterCategorie();
+//        }
 }

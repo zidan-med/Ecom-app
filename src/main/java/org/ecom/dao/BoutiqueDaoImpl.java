@@ -1,15 +1,15 @@
 package org.ecom.dao;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContexts;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 
 import org.ecom.entities.*;
-import org.springframework.data.jpa.repository.Query;
-
 public class BoutiqueDaoImpl implements IBoutiqueDao {
-	@PersistenceContexts
+	@PersistenceContext
 	private EntityManager em;
 
 	@Override
@@ -19,7 +19,7 @@ public class BoutiqueDaoImpl implements IBoutiqueDao {
 	}
 
 	@Override
-	public List<Categorie> listeCatgorie() {
+	public List<Categorie> listeCatgories() {
 		Query req=em.createQuery("select c from Categorie c");
 		return req.getResultList();
 	}
